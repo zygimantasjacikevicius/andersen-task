@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Login;
 use Illuminate\Http\Request;
-use App\Http\Requests\StoreLoginRequest;
 use App\Http\Requests\UpdateLoginRequest;
 use Validator;
+use Illuminate\Support\MessageBag;
 
 class LoginController extends Controller
 {
@@ -48,7 +48,8 @@ class LoginController extends Controller
                 'name' => 'required|max:255|min:2',
                 'email' => 'required|email',
                 'message' => 'required|min:10',
-            ]
+            ],
+
         );
 
         $request->flash();

@@ -2,8 +2,15 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-10">
 
+            <div class="col-md-10">
+                <div class="col-md-10">
+                    @foreach ($errors->all() as $error)
+                        <div class="bg-danger text-white">
+                            <h4>{{ $error }}</h4>
+                        </div>
+                    @endforeach
+                </div>
                 <div class="card">
                     <div class="card-header">
                         <h1>Please add your details below</h1>

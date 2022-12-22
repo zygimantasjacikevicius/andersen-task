@@ -46,9 +46,10 @@
                     <div class="card mt-3">
                         <div class="card-body ">
 
-                            <h5 class="card-title">{{ $login->name }}</h5>
-                            <p class="card-text"> {{ $login->email }}</p>
-                            <p class="card-text"> {{ $login->message }}</p>
+                            <h5 class="card-title">Name: {{ $login->name }}</h5>
+                            <p class="card-text">Email: {{ $login->email }}</p>
+                            <p class="card-text">Message: {{ $login->message }}</p>
+                            <p class="card-text">Create date: {{ $login->created_at }}</p>
 
                         </div>
                     </div>
